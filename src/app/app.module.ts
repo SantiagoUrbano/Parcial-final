@@ -11,6 +11,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { RecetasComponent } from './components/recetas/recetas.component';
 import { RestaurantesComponent } from './components/restaurantes/restaurantes.component';
 import { CulturasService } from './services/culturas.service';
+import { ResturantDetailComponent } from './components/resturant-detail/resturant-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CulturasService } from './services/culturas.service';
     ProductListComponent,
     ProductDetailComponent,
     RecetasComponent,
-    RestaurantesComponent
+    RestaurantesComponent,
+    ResturantDetailComponent
   ],
   imports: [
     BrowserModule,

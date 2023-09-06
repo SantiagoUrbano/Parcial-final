@@ -1,1 +1,23 @@
-<p>culture-details works!</p>
+
+<div class="container text-center">
+    <div class="row">
+    <div class="col" *ngFor="let info of informacion; let i = index">
+        <div class="card" style="width: 50rem;">
+            <img [src]="info.imageUrl" class="card-img-top" alt="imagenes">
+            <div class="card-body">
+                <h5 class="card-title">{{ info.pais }}</h5>
+                <p class="card-text">{{ info.descripcion }}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{ info.productos}}</li>
+            </ul>
+            <div class="card-body">
+                <a [routerLink]="['recetas', i]" class="card-link">Recetas</a>
+                <a [routerLink]="['producto', i]" class="card-link">Productos</a>
+                <a [routerLink]="['restaurante', i]" class="card-link">Restaurante</a>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+</div>
