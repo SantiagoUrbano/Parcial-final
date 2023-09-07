@@ -1,2 +1,19 @@
-<p>product-detail works!</p>
-<h1>{{ productDetail.descripcion }}</h1>
+<div class="card" style="width: 50rem;">
+    <img [src]="productDetail.imageUrl" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{ productDetail.pais }}</h5>
+        <p class="card-text">{{ productDetail.descripcionProducto }}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><img [src]="productDetail.ProductoImg1" class="card-img-top" alt="..."></li>
+        <li class="list-group-item"><img [src]="productDetail.ProductoImg2" class="card-img-top" alt="..."></li>
+    </ul>
+    <div class="card-body">
+        <a [href]="productDetail.preparacion1" class="card-link">Preparacion 1</a>
+        <a [href]="productDetail.preparacion2" class="card-link">Preparacion 2</a>
+    </div>
+</div>
+
+<div class="content">
+<button [routerLink]="['/Culturas']" class="btn btn-outline-danger">Regresar</button>
+</div>

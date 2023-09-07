@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { InformacionCultura } from 'src/app/services/informacion.service';
 import { ActivatedRoute } from '@angular/router';
 import { InformacionService } from 'src/app/services/informacion.service';
+import { RecetasinfoService } from 'src/app/services/recetasinfo.service';
 
 
 @Component({
@@ -13,9 +14,9 @@ export class RecetasComponent {
 
   receta:any = {};
 
-  constructor ( private activatedRoute: ActivatedRoute, private _infoService: InformacionService ) {
+  constructor ( private activatedRoute: ActivatedRoute, private _infoReceta: RecetasinfoService) {
     this.activatedRoute.params.subscribe( params => {
-      this.receta = this._infoService.getReceta( params['id'] );
+      this.receta = this._infoReceta.getReceta( params['id'] );
     });
   }
 }

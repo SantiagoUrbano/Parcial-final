@@ -1,3 +1,8 @@
-<p>recetas works!</p>
-
-<h1>{{ receta.pais }}</h1>
+<div class="card mb-3">
+    <img [src]="receta.imagenUrl" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{ receta.nombre }}</h5>
+        <p class="card-text">{{ receta.descripcion }}</p>
+        <a [href]="receta.videoUrl" class="btn btn-primary">Video de receta</a>
+    </div>
+</div>
